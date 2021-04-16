@@ -1,0 +1,44 @@
+<div *ngIf="loading">
+    <div class="spiner"  role="status">
+        <mat-spinner></mat-spinner>
+        <span>Loading... </span>
+    </div>
+</div>
+<div *ngIf='companyInfo' class="about-cotainer">
+    <div class="about-card">
+        <div class="data"> 
+            <span class="title">
+                <p>{{ companyInfo.name }}</p>
+            </span>
+            <span class="date">
+                <p>Founded year: {{ companyInfo.founded }}</p>
+            </span>
+            <span class="ceo">
+                <p>CEO: {{ companyInfo.ceo | uppercase }}</p>
+            </span>
+            <span class="coo">
+                <p>COO: {{ companyInfo.coo | uppercase}}</p>
+            </span>
+            <span class="valuation">
+                <p>Valuation: {{ companyInfo.valuation | currency:'CAD' }}</p>
+            </span>
+            <span>
+                <p class="description">{{ companyInfo.summary }}</p>
+            </span>
+            <div class="action">
+                <button mat-fab color="primary" aria-label="go to Link" (click)="goTo(companyInfo.links.elon_twitter)">
+                    <mat-icon>info</mat-icon>
+                </button>
+                <button mat-fab color="primary" aria-label="go to Link" (click)="goTo(companyInfo.links.flickr)">
+                    <mat-icon>add_circle</mat-icon>
+                </button>
+                <button mat-fab color="primary" aria-label="go to Link" (click)="goTo(companyInfo.links.twitter)">
+                    <mat-icon>more</mat-icon>
+                </button>
+                <button mat-fab color="warn" aria-label="go to Link" (click)="goTo(companyInfo.links.website)">
+                    <mat-icon>web</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

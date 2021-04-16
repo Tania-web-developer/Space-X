@@ -1,0 +1,46 @@
+<div *ngIf="loading">
+    <div class="spiner"  role="status">
+        <mat-spinner></mat-spinner>
+        <span>Loading... </span>
+    </div>
+</div>
+<div *ngIf='launch' class="launch-details-container">
+    <div class="launch-detail-header">
+        <span class="launch-avatar-header">
+            <img [src]="launch.links.patch.small" [alt]="launch.name">
+        </span>
+        <span class="launch-title-header">
+            <h1>{{launch.name}}</h1>
+            <div class="launch-details">
+                <p>Date: {{getDate(launch.date_local)}}</p>
+                <p>Time: {{getTime(launch.date_local)}}</p>
+                <div>
+                    <p id="description">{{launch.details}}</p>
+                </div>
+                <button mat-fab color="primary" aria-label="go to Link"
+                    (click)="goTo(launch.links.webcast)">
+                    <mat-icon>duo</mat-icon>
+                </button>
+                <button mat-fab color="primary" aria-label="go to Link"
+                    (click)="goTo(launch.links.article)">
+                    <mat-icon>travel_explore</mat-icon>
+                </button>
+                <span class="toolbar-spacer"></span>
+                <button mat-fab color="warn" aria-label="goBack" (click)="goBack()">
+                    <mat-icon>replay</mat-icon>
+                </button>
+            </div>
+        </span>
+    </div>
+    <div class="img-gallery">
+        <mat-grid-list cols="1" rowHeight="1.8:1" padding="2dp">
+            <mat-grid-tile *ngFor='let img of launch.links.flickr.original'>
+                <div class="frame">
+                    <img [src]="img" [alt]="launch.name">
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+    </div>
+
+</div>

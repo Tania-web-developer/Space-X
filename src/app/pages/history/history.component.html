@@ -1,0 +1,28 @@
+<div *ngIf="loading">
+    <div class="spiner"  role="status">
+        <mat-spinner></mat-spinner>
+        <span>Loading... </span>
+    </div>
+</div>
+<div class="history-cotainer">
+    <div *ngFor='let event of history'>
+        <div class="event-card">
+            <div class="event-data">
+                <span class="date">
+                    <p>Date: {{getDate(event.event_date_utc)}}</p>
+                </span>
+                <span class="title">
+                    <p>{{event.title | uppercase}}</p>
+                </span>
+                <span>
+                    <p class="description">{{event.details}}</p>
+                </span>
+            </div>
+            <div class="action">
+                <button mat-fab color="primary" aria-label="go to Link" (click)="goTo(event.links.article)">
+                    <mat-icon>travel_explore</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

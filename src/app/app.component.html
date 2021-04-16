@@ -1,0 +1,25 @@
+<app-header [menu]="menu"></app-header>
+<mat-drawer-container class="drawer-container">
+  <mat-drawer #menu class="app-sidenav" mode="side">
+    <mat-list>
+      <mat-list-item>
+        <a routerLink="/">HISTORY</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a routerLink="/rockets">ROCKETS</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a routerLink="/launches">LAUNCHES</a>
+      </mat-list-item>
+      <mat-divider color="warn"></mat-divider>
+      <mat-list-item>
+        <a routerLink="/about">ABOUT</a>        
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

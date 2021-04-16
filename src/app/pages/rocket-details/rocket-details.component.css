@@ -1,0 +1,70 @@
+.rocket-detail-header{
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    color: white;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+.rocket-avatar-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;    
+}
+.rocket-title-header{
+    margin-left: 40px;
+}
+.rocket-title-header h1{
+    color: rgb(228, 229, 241);
+    font-size: 300%;
+    font-weight: 500;
+    line-height: 1.2;    
+}
+.rocket-details p {
+    color: rgb(163, 163, 173); 
+    font-size: large;   
+}
+.rocket-avatar-header{
+    padding-top: 20px;
+}
+.rocket-details-container{
+    display: flex;
+    justify-content: center;
+    
+}
+#description{
+    color: white;
+    font-size: xlarge;
+    line-height: 1.5;
+    font-weight: 200;
+}
+.toolbar-spacer{
+    flex: 1 1 auto;
+}
+button{
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.img-gallery{
+    width: 400px;
+}
+
+.img-gallery img{
+    width: 300px;
+}
+.spiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  
+    align-items: center; 
+    margin-top: 20px;
+    color: grey; 
+    font-size: larger;      
+}
+.spiner p{
+    margin-top: 20px;
+}
+

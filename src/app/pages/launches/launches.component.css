@@ -1,0 +1,73 @@
+.launch-card {
+    display: flex;    
+    flex-direction: row;
+    align-items: center;
+    width: 500px; 
+    height: 300px;   
+    background-color: black;
+    color: rgb(163, 157, 157);
+    /* box-shadow: rgba(81, 53, 236, 0.4) 0px 30px 90px; */
+    /* border-width: 3px;
+    border-style: solid; */
+    border: 2px solid;
+    border-image-source: linear-gradient(45deg, rgb(0, 74, 143),black);
+    border-image-slice: 1;   
+}
+.launch-card:hover{
+    border: 2px solid;
+    border-image-source: linear-gradient(45deg, black, white);
+    border-image-slice: 1;   
+}
+.img-cart-container{   
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    
+}
+.launch-card img{
+    width: 150px;            
+}
+.mat-card-content{   
+    padding: 5px;
+    width: 200px;
+    height: 90px;    
+    text-align: left;
+    -webkit-line-clamp: 5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;       
+}
+.mat-card-actions{
+    margin-bottom: 0px;
+}
+.mat-card-actions button{
+    margin-left: 0;
+}
+.mat-card-header {
+    color: rgb(12, 94, 161);
+}
+.spiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  
+    align-items: center; 
+    margin-top: 20px;
+    color: grey; 
+    font-size: larger;      
+}
+.spiner p{
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+

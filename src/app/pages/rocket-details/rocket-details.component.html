@@ -1,0 +1,39 @@
+<div *ngIf="loading">
+    <div class="spiner"  role="status">
+        <mat-spinner></mat-spinner>
+        <span>Loading... </span>
+    </div>
+</div>
+<div *ngIf='rocket' class="rocket-details-container">
+    <div class="rocket-detail-header">       
+        <span class="rocket-title-header">
+            <h1>{{rocket.name}}</h1>
+            <div class="rocket-details">
+                <p>First flight: {{rocket.first_flight}}</p>
+                <p>Mass: {{rocket.mass.lb}} lb</p>
+                <div>
+                    <p id="description">{{rocket.description}}</p>
+                </div>
+                <button mat-fab color="primary" aria-label="go to Link"
+                    (click)="goTo(rocket.wikipedia)">
+                    <mat-icon>travel_explore</mat-icon>
+                </button>
+                <span class="toolbar-spacer"></span>
+                <button mat-fab color="warn" aria-label="goBack" (click)="goBack()">
+                    <mat-icon>replay</mat-icon>
+                </button>
+            </div>
+        </span>
+    </div>
+    <div class="img-gallery">
+        <mat-grid-list cols="1" rowHeight="1.8:1" padding="2dp">
+            <mat-grid-tile *ngFor='let img of rocket.flickr_images'>
+                <div class="frame">
+                    <img [src]="img" [alt]="rocket.name">
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+    </div>
+
+</div>

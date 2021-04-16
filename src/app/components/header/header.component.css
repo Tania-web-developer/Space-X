@@ -1,0 +1,31 @@
+.toolbar-spacer{
+    flex: 1 1 auto;
+}
+.header{
+    height: 197px;
+    background-image: url(./bg_header.jpg);
+    background-repeat: no-repeat;
+    padding: 0px !important;
+}
+.logo-bg{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    
+    margin-bottom: 20px;
+}
+.header-menu{
+    width: 30px;
+}
+.logo{    
+    position: absolute;
+    top: 55px;
+    left: 110px;        
+}
+.logo img{   
+    height: 80px;       
+}
+
+
+
